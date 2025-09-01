@@ -1,0 +1,411 @@
+C PROGRAMS:-
+
+
+1.  Write a program to print your name, course, and university.
+ 
+#include <stdio.h>
+ 
+int main()
+{
+                      printf("VAISHNAVI SRIVASTAVA\n");
+	printf("BTECH CSE AI/ML\n");
+	printf("CHANDIGARH UNIVERSITY");
+	return 0;
+}
+ 
+-------------------------------------------------------------------------------------------------
+
+2.     Write a program that prints "C is a powerful language" five times.
+ 
+#include <stdio.h>
+ 
+int main()
+{
+	int x;
+    for(x=1;x<=5;x++)
+	{
+        printf("C is a powerful language\n");
+	}
+  
+----------------------------------------------------------------------------------------------------------
+3.     Write a program to display “Welcome to C Programming” using a separate user-defined function.
+ 
+#include <stdio.h>
+void display();
+int main()
+{
+	display();
+	return 0;
+}
+void display()
+{
+	printf("Welcome to C programming");
+}
+--------------------------------------------------------------------------------------------------------------------------
+
+
+4.     Write a program with two functions: one to calculate the square of a number and another to calculate the cube.
+ 
+ 
+#include <stdio.h>
+void square(int n);
+void cube(int n);
+int main()
+{
+	int x;
+	printf("Enter the number");
+	scanf("%d",&x);
+	square(x);
+	cube(x);
+	return 0;
+}
+void square(int n)
+{
+	printf("Square of the number is=%d\n",n*n);
+}
+void cube(int n)
+{
+	printf("Cube of the number is=%d",n*n*n);
+}
+ 
+---------------------------------------------------------------------------------------------
+
+5.     Write a program that uses a function to print your roll number and name.
+ 
+#include <stdio.h>
+void display(int x,char c[]);
+int main()
+{
+	int r; char ch[50];
+    printf("Enter your roll number and name");
+    scanf("%d",&r);
+    fgets(ch,sizeof(ch),stdin);
+    display(r,ch);
+    return 0;
+}
+void display(int x,char c[])
+{
+    printf("Name is %s",c);
+    printf("Roll number is %d",x);
+}
+
+------------------------------------------------------------------------------------------------
+6.     Write a program to declare and print an integer, a float, and a character variable.
+ 
+ 
+#include <stdio.h>
+int main(void)
+{
+  int x; float n; char ch;
+  printf("Enter an integer variable, a float variable and a character variable");
+  scanf("%d %f %c",&x,&n,&ch);
+  printf("Integer value:%d\n",x);
+  printf("Float value:%.2f\n",n);
+  printf("Character value:%c\n",ch);
+}
+
+---------------------------------------------------------------------------------
+7. Write a program to demonstrate the use of const keyword.
+ 
+#include <stdio.h>
+ 
+int main()
+{
+	const float pi=3.14;
+	printf("%.2f",pi);
+ 
+	return 0;
+}
+
+---------------------------------------------------------------------------------------------------------------
+
+8.Write a program to define a symbolic constant for the value of Pi and calculate the area of a circle.
+ 
+ 
+#include <stdio.h>
+ 
+int main()
+{
+	const float pi=3.14;
+	float r;
+	printf("Enter the radius:");
+	scanf("%f",&r);
+	float area= pi*r*r;
+	printf("Area of circle is %.2f",area);
+	return 0;
+}
+
+---------------------------------------------------------------------------------------
+
+9.Write a program to input an integer and a float and print their sum.
+ 
+ 
+ 
+#include <stdio.h>
+ 
+int main()
+{
+	int a;
+	float b,sum;
+	printf("Enter two numbers:");
+	scanf("%d %f", &a,&b);
+	sum=a+b;
+	printf("Sum= %f",sum);
+ 
+	return 0;
+}
+
+
+-------------------------------------------------------------------------------------------
+10.Write a program to demonstrate implicit type conversion in an expression.
+ 
+ 
+ 
+#include <stdio.h>
+ 
+int main()
+{
+	int i;
+	float f;
+	double d;
+	printf("Enter two numbers");
+	scanf("%d %f",&i,&f);
+	d=i+f;
+	printf("Sum=%lf",d);
+	return 0;
+}
+
+------------------------------------------------------------------------------------------------
+11.Write a program to demonstrate explicit type casting by converting float to int.
+ 
+ 
+#include <stdio.h>
+ 
+int main()
+{
+	float a,b;
+	int x;
+	printf("Enter two float numbers");
+	scanf("%f %f",&a,&b);
+	x=(int)(a+b);
+	printf("Sum=%d",x);
+	return 0;
+}
+------------------------------------------------------------------------------------------------
+
+12.Write a program to find the ASCII value of a given character.
+ 
+ 
+ 
+#include <stdio.h>
+ 
+int main()
+{
+	char ch;
+	printf("Enter a character");
+	scanf("%c",&ch);
+	printf("The ASCII value of %c is %d",ch,ch);
+	return 0;
+}
+
+----------------------------------------------------------------------------------------------------
+13.Write a program to perform all arithmetic operations on two numbers.
+ 
+#include <stdio.h>
+ 
+int main()
+{
+	int a,b;
+	printf("Enter two numbers");
+	scanf("%d %d",&a,&b);
+    printf("Sum=%d\n",a+b);
+    printf("Substraction=%d\n",a-b);
+	printf("Multiplication=%d\n",a*b);
+    printf("Division=%d\n",a/b);
+   printf(“Remainder=%d”,a%b);
+	return 0;
+}
+
+------------------------------------------------------------------------------------------------
+14.Write a program to check whether a number is even or odd using modulus operator.
+ 
+#include <stdio.h>
+ 
+int main()
+{
+	printf("Enter an integer number \n");
+	int n;
+    scanf("%d",&n);
+	if(n%2==0)
+	{
+    	printf("The number is even number\n");
+	}
+	else
+	{
+    	printf("The number is odd number\n");
+	}
+	return 0;
+}
+
+----------------------------------------------------------------------------------------------
+15.Write a program to demonstrate the difference between pre-increment and post-increment.
+ 
+#include <stdio.h>
+ 
+int main()
+{
+	printf("Enter a number");
+	int a;
+	scanf("%d",&a);
+	printf("pre-increment:%d\n",++a);
+    printf("post-increment:%d\n",a++);
+	return 0;
+}
+
+--------------------------------------------------------------------------------------------
+16.Write a program to calculate the simple interest (SI = P × R × T / 100).
+ 
+#include <stdio.h>
+ 
+int main()
+{
+	printf("Enter the principal amount, rate and time period");
+	float P,R,T;
+	scanf("%f %f %f",&P,&R,&T);
+	float SI= (P*R*T)/100;
+	printf("The simple interest is %f",SI);
+	return 0;
+}
+
+-------------------------------------------------------------------------
+
+17.. Write a program to evaluate the expression: (a + b) * (c - d).
+ 
+#include <stdio.h>
+ 
+int main()
+{
+	printf("Enter 4 numbers");
+	int a,b,c,d;
+	scanf("%d %d %d %d",&a,&b,&c,&d);
+	int sum=(a+b)*(c-d);
+    printf("Answer:%d",sum);
+	return 0;
+}
+
+-----------------------------------------------------------------------------------------------------------------
+
+18. Write a program to input two integers and print their sum, difference, product, and quotient.
+ 
+#include <stdio.h>
+ 
+int main()
+{
+	int a,b;
+	printf("Enter two numbers");
+	scanf("%d %d",&a,&b);
+    printf("Sum=%d\n",a+b);
+    printf("Substraction=%d\n",a-b);
+    printf("Multiplication=%d\n",a*b);
+    printf("Division=%d\n",a/b);
+	return 0;
+}
+
+--------------------------------------------------------------------------------------------------------------------
+
+19.Write a program to input name, age, and percentage of a student, and print them in a formatted way.
+ 
+#include <stdio.h>
+ 
+int main()
+{
+	printf("Enter your name");
+	char name[50];
+	fgets(name,sizeof(name),stdin);
+	printf("Enter your age and percentage");
+	int a; float p;
+	scanf("%d %f",&a,&p);
+	printf("Name=%s\n Age=%d\n Percentage=%.2f",name,a,p);
+	return 0;
+}
+
+----------------------------------------------------------------------------------------------------------
+20. Write a program to input radius of a circle and print area and circumference
+ 
+ 
+#include <stdio.h>
+ 
+int main()
+{
+	const float pi=3.14;
+	float r;
+	printf("Enter the radius:");
+	scanf("%f",&r);
+	float area= pi*r*r;
+	float circum=2*pi*r;
+	printf("Area of circle is %.2f\n",area);
+	printf("Area of circumference is %.2f",circum);
+	return 0;
+}
+
+---------------------------------------------------------------------------------------------
+21. Write a program to input temperature in Celsius and convert it into Fahrenheit.
+ 
+ 
+#include <stdio.h>
+ 
+int main()
+{
+	float f,c;
+	printf("Enter the temperature in celsius:");
+	scanf("%f",&c);
+	f= (c*9/5)+32;
+	printf("The tempeture in farenheit is: %.2f",f);
+ 
+	return 0;
+}
+
+----------------------------------------------------------------------------------
+
+21. Write a program to input temperature in Celsius and convert it into Fahrenheit.
+ 
+ 
+#include <stdio.h>
+ 
+int main()
+{
+	float f,c;
+	printf("Enter the temperature in celsius:");
+	scanf("%f",&c);
+	f= (c*9/5)+32;
+	printf("The tempeture in farenheit is: %.2f",f);
+ 
+	return 0;
+}
+
+-----------------------------------------------------------------------------------------
+#include <stdio.h>
+
+int main() {
+    float mark1, mark2, mark3;
+    float average;
+
+    // Input marks from the user
+    printf("Enter marks of subject 1: ");
+    scanf("%f", &mark1);
+
+    printf("Enter marks of subject 2: ");
+    scanf("%f", &mark2);
+
+    printf("Enter marks of subject 3: ");
+    scanf("%f", &mark3);
+
+    // Calculate average
+    average = (mark1 + mark2 + mark3) / 3;
+
+    // Print the result
+    printf("Average marks = %.2f\n", average);
+
+    return 0;
+}
+----------------------------------------------------------------------------------
